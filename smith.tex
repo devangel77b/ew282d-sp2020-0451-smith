@@ -17,32 +17,117 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Write one paragraph here that explains what your report is about.
+This study was conducted to investigate how effectively citrus plants can change their structure to generate less drag in wind. A cord with known spring constant was attached to a young grapefruit plant and an aluminum model of one of its leaves, a box fan was used to create a wind tunnel, and area was calculated using Matlab's color thresholding and blob detection software. The actual drag created on the grapefruit leaves was significantly less than the drag expected on an identical model, and slow motion video analysis indicated that this was the result of the citrus's ability to bend at the petiole. The extreme bending in several directions showed the plant's inclination toward protective load shedding.
+
 \end{abstract}
 
 \section{Introduction}
+%Smith: The main ones to look at closely are Vogel and also Laura Miller and Company, and then the algae stuff from Emily Carrington, Mark Denny, Hannah Stewart, etc. May also search on ecological safety factors, reconfigurable structures, use of physical models. I didn't check mangrove literature for drag and shape reconfiguration, I think there's also coral literature about corals breaking during hurricanes to reduce loads / save the colony from death. In engineering context, this is same idea as protective load shedding in electrical systems, or crumple zones and holding bulkheads in structural systems; reefing during sailing, etc. 
+
 Work from an inverted triangle (broader topics to more specific). Explain what you are interested, review some relevant literature, and then set up what your specific research question is. Cite literature using the author-year format, as in \citep{buck2020go}. If you need pictures to explain the relevant biomechanics, feel free to include. This section should also say a little why your research matters. 
 % things to explain include drag, how it depends on speed, area, etc; why it matters to plants, what they can do to minimize or mitigate drag...
 The last part of this section should be the specific hypotheses you seek to test. 
 
 \section{Methods and materials}
-Explain what you did, in enough detail so someone can replicate it. If you need pictures or drawings to explain the setup feel free to use them. 
-% Need pictures! 
+\begin{itemize}
+\item 1 six-year old grapefruit plant
+\item 1 cord of known spring constant
+\item 1 measuring tape
+\item 1 Kaz Inc. Ht-908 15 inch Honeywell Turbo Force Room Air Circulator Fan
+\item colored construction paper
+\item 1 pair of scissors
+\item clear tape
+\item 1 Samsung Galaxy S-8 smartphone camera
+\item 1 wooden chair
+\item flat, rectangular surfaces
+\item MATLAB software
+\item pipe cleaners
+\item nylon rope
+\end{itemize}
+
+The first step in the process was to find a cord of known spring constant. In this experiment, a cord from a party mask was found to have a spring coefficient of 0.589 lbf/in. The cord was attached to a nylon rope and tied to pipe cleaners at both ends so that it could be connected to plant stems. The pipe cleaners were included in the spring constant calculation.
+
+The experimental setup for measuring the spring's deflection due to drag is shown in Figure 1. The cord was strung between a heavy chair and the trunk of a grapefruit plant so that it was not slack, and its length was measured using a tape measure. Then, a box fan was placed one foot away from the trunk of the plant. The plant and fan were raised using flat, rectangular objects, such as textbooks, in order to position the plant's canopy in front of the fan. The cord's deflection was measured five times at each of the fan's three speed settings and a slow motion video of the plant's leaves was taken at the highest fan setting.
+
+Next, the cross sectional area of the plant was calculated using color blob detection in Matlab. To do this, black construction paper was cut to the size and shape of the fan's opening and affixed to it. Because air was blowing from relatively close to the plant, only the area which was directly in front of the fan opening would be exposed to wind. The plant was of a complex shape, so it was more efficient to calculate the area of the fan which was not covered by the plant. The setup was photographed from afar and scaled to eliminate the colorful surroundings, as shown in Figure 2. A picture of the fan-shaped paper was also taken against a blue background from the same distance with no citrus obscuring it and scaled by the same amount, which can also be seen in Figure 2. Using Matlab's colorThresholder system, the ratio of covered to uncovered area was found and multiplied by the known paper area to find the area of the grapefruit leaves.
+
+After analyzing the results of the grapefruit plant, a rigid model was created to test the same conditions without the presence of bending. A small leaf was placed against an aluminum Chipotle bowl lid to serve as a stencil, which was cut out using scissors. Then, this model leaf was taped to a wooden pencil so that the pencil would prevent it from flexing, while any tape edges were cut off. The finished leaf model can be seen in 
+Figure 3.
+
+The leaf model was tested in the same manner as the grapefruit plant at the highest fan setting. Because the deflection in the cord was quite small, the displacement was measured using slow motion video. To do this, a tape measure with millimeters marked was taped below the cord and the video was taken from directly above. The video device was planted on a solid surface to minimize movement, and the displacement was found by zooming in on the video and pausing when the cord was fully extended and relaxed. 
+
+In order to compare the model area to the area of the grapefruit, a sheet of orange construction paper was photographed with and without the model leaf against it. Then, using the color blob detection technique in Matlab, the ratio of the model area to the paper area was calculated and multiplied by the actual paper area, in square feet. The images for this analysis can be seen in Figure 4.
+
+With the approximate cross sectional areas of the actual grapefruit leaves and the model found, the discussion over how these areas and their corresponding drags differed could begin.
+
+
+\begin{figure}
+    \centering
+    \includegraphics{Grapefruit_Setup.jpg} 
+    \caption{Figure 1: Experimental setup to measure the deflection of a grapefruit plant when exposed to wind.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{Fan.jpg}
+    \includegraphics{Fan1.jpg}
+    \caption{Figure 2: The exposed area of the fan-shaped construction paper with and without the plant in front of it.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{Metal_Leaf_Compared.jpg}
+    \caption{Figure 3: The aluminum grapefruit leaf model (right) with a small jackfruit leaf, for scale.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{MetalLeaf.jpg}
+    \includegraphics{Paper.jpg}
+    \caption{Figure 4: The orange construction paper of known area photographed with and without the model leaf overlaid.}
+\end{figure}
 
 \subsection{Specimens and physical models}
 \subsection{Drag measurements}
-%\subsection{Statistical analyes}
-Statistical analyses of the effects of both leaf and fan speed on drag and drag/area were performed using R \citep{r2020} using two-way analysis of variance (ANOVA); plots were prepared using the \lstinline{tidyverse} and \lstinline{ggplot2} libraries \citep{wickham2019tidyverse}. 
+
+%\subsection{Statistical analyses}
+Statistical analyses of the effects of both leaf and fan speed on drag and drag/area were performed using R \citep{r2020} using two-way analysis of variance (ANOVA); plots were prepared using the \lstinline{tidyverse} and \lstinline{ggplot2} libraries \citep{wickham2019tidyverse}. The average drag per unit area was found for the model leaf and the grapefruit leaves.
 
 \section{Results}
 %Explain factually what you found... leave interpretation of what it means for the final discussion section. Here you would include plots of what you found or comparison tables.
+For the grapefruit leaves 
+
+\begin{tabular}{|c|c|c|c|}
+     Grapefruit & Grapefruit & Grapefruit & Metal Leaf \\
+     Speed 1(in) & Speed 2(in) & Speed 3(in) & Speed 3(cm) \\ 
+     0.156 & 0.250 & 0.313 & 0.200 \\
+     0.188 & 0.188 & 0.250 & 0.0500 \\
+     0.250 & 0.250 & 0.313 & 0.100 \\
+     0.188 & 0.219 & 0.313 & 0.200 \\
+     0.188 & 0.250 & 0.313 & 0.150 \\
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|c|}
+ & Grapefruit & Grapefruit & Grapefruit & Metal Leaf \\
+ & Speed 1(in) & Speed 2(in) & Speed 3(in) & Speed 3(cm) \\
+Average Force (lbf)	& 0.011 & 0.014 & 0.018 & 0.0032\\
+\end{tabular}
+
+\begin{tabular}{|c|c|c|}
+Grapefruit Area (sqft) & Leaf Area (sqft) & k (lbf/in) \\
+0.223 & 0.0345 & 0.059\\
+\end{tabular}
+
+
+
+
 \Fref{fig:results1} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results2} shows... (what does it show). 
 
 \begin{figure}
 \begin{center}
 \includegraphics{data/results1.pdf}
 \end{center}
-\caption{Drag for grapefruit (green) and metal (gray) leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (two-way ANOVA, $p<\num{1.67e-5}$, $n=5$).}
+\caption{Drag (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (two-way ANOVA, $p<\num{1.67e-5}$, $n=5$).}
 \label{fig:results1}
 \end{figure}
 
@@ -50,10 +135,9 @@ Statistical analyses of the effects of both leaf and fan speed on drag and drag/
 \begin{center}
 \includegraphics{data/results2.pdf}
 \end{center}
-\caption{Drag, normalized by area, for grapefruit (green) and metal (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two-way ANOVA, $p<0.003$, $n=5$).}
+\caption{Drag, normalized by area, (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two-way ANOVA, $p<0.003$, $n=5$).}
 \label{fig:results2}
 \end{figure}
-
 
 
 \section{Discussion}
