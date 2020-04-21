@@ -80,3 +80,6 @@ dev.off()
 #png('results2.png',width=300,height=200)
 #print(da.plot)
 #dev.off()
+
+ggsave(file="results1.svg",plot=drag.plot,width=3,height=2);
+ggsave(file="results2.svg",plot=da.plot,width=3,height=2);
