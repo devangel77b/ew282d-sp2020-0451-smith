@@ -23,8 +23,31 @@ The last part of this section should be the specific hypotheses you seek to test
 \section{Methods and materials}
 Explain what you did, in enough detail so someone can replicate it. If you need pictures or drawings to explain the setup feel free to use them. 
 
+\subsection{Specimens and physical models}
+\subsection{Drag measurements}
+%\subsection{Analyis}
+Statistical analyses of the effects of both leaf and fan speed on drag and drag/area were performed using R \citep{r2020} using two-way analysis of variance (ANOVA).
+
 \section{Results}
 Explain factually what you found... leave interpretation of what it means for the final discussion section. Here you would include plots of what you found or comparison tables.
+
+\begin{figure}
+\begin{center}
+\includegraphics{data/results1.pdf}
+\end{center}
+\caption{Drag for grapefruit and metal leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (ANOVA, $p<\num{1.67e-5}$).}
+\label{fig:results1}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{data/results2.pdf}
+\end{center}
+\caption{Drag, normalized by area, for grapefruit and metal leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two way ANOVA, $p<0.003$).}
+\label{fig:results2}
+\end{figure}
+
+
 
 \section{Discussion}
 Here discuss what your results mean. Are your hypotheses supported or not? Do you have an answer to your overall research question?
