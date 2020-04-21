@@ -77,4 +77,6 @@ pdf('results2.pdf',width=3,height=2)
 print(da.plot)
 dev.off()
 
-         
+#png('results2.png',width=300,height=200)
+#print(da.plot)
+#dev.off()
