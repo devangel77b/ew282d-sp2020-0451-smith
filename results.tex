@@ -1,0 +1,69 @@
+\section{Results}
+%Explain factually what you found... leave interpretation of what it means for the final discussion section. Here you would include plots of what you found or comparison tables.
+For the grapefruit leaves 
+
+\begin{table}
+\caption{Measured raw displacementdata for grapefruit leaf and metal physical model; average force and area. Should be in SI units. Probably would just give a summary table. Was metal leaf displacement really measured in \si{\centi\meter}? Why is metal leaf so small in picture it looks same size. Suggest moving this to appendix and only having a summary in the main text.}
+\label{tbl:results1}
+
+\begin{center}
+Displacement (\si{in})\\
+\begin{tabular}{cccc}
+\toprule
+grapefruit & grapefruit & grapefruit & metal leaf \\
+speed 1 & speed 2 & speed 3 & speed 3(cm) \\ 
+\midrule
+0.156 & 0.250 & 0.313 & 0.200 \\
+0.188 & 0.188 & 0.250 & 0.0500 \\
+0.250 & 0.250 & 0.313 & 0.100 \\
+0.188 & 0.219 & 0.313 & 0.200 \\
+0.188 & 0.250 & 0.313 & 0.150 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+Average force (\si{lbf})\\
+\begin{tabular}{cccc}
+\toprule
+grapefruit & grapefruit & grapefruit & metal leaf \\
+speed 1 & speed 2 & speed 3 & speed 3 \\
+\midrule
+0.011 & 0.014 & 0.018 & 0.0032\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+Area data (\si{ft\squared})\\
+\begin{tabular}{cc}
+\toprule
+grapefruit & metal leaf \\ %& k (lbf/in) \\
+\midrule
+0.223 & 0.0345 \\ %& 0.059\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\Fref{fig:results1} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results2} shows... (what does it show). 
+
+\begin{figure}
+\begin{center}
+\includegraphics{data/results1.pdf}
+\end{center}
+\caption{Drag (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (two-way ANOVA, $p<\num{1.67e-5}$, $n=5$).}
+\label{fig:results1}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{data/results2.pdf}
+\end{center}
+\caption{Drag, normalized by area, (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two-way ANOVA, $p<0.003$, $n=5$).}
+\label{fig:results2}
+\end{figure}
+
+
