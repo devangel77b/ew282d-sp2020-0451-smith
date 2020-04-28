@@ -55,32 +55,43 @@ drag.plot <- ggplot(drag.summary, aes(x=as.factor(speed),y=mean.D,fill=leaf))+
     scale_fill_manual(values=c("green","gray50"))+
     annotate("text",x=3.23,y=0.025,label="*")+
     theme_bw(base_size=8)+
-    theme(legend.position="none")
+    theme(legend.position="none",
+          text=element_text(size=10),
+          axis.text.x=element_text(size=8),
+          axis.text.y=element_text(size=8))
 pdf('results1.pdf',width=3,height=2)
 print(drag.plot)
 dev.off()
+ggsave(filename="results1.svg",
+       plot=drag.plot,
+       width=3,height=2,units="in")
 
 da.plot <- ggplot(drag.summary, aes(x=as.factor(speed),y=mean.DA,fill=leaf))+
     geom_col(position=position_dodge2(preserve="single"))+
     geom_errorbar(aes(ymin=mean.DA-sd.DA,ymax=mean.DA+sd.DA),width=0.2,
                   position=position_dodge(width=0.9))+
     xlab("fan setting")+
-    ylab("drag/area, N/m$^2$")+
+    ylab(TeX("drag/area, N/m$^2$"))+
     scale_fill_manual(values=c("green","gray50"))+
     annotate("segment",x=1-0.2,xend=2+0.2,y=7,yend=7)+
     annotate("segment",x=2-0.2,xend=3,y=7.25,yend=7.25)+
     theme_bw(base_size=8)+
-    theme(legend.position="none")
+    theme(legend.position="none",
+          text=element_text(size=10),
+          axis.text.x=element_text(size=8),
+          axis.text.y=element_text(size=8))
 pdf('results2.pdf',width=3,height=2)
 print(da.plot)
 dev.off()
-
+#svg('results2.svg',width=3,height=2,pointsize=8)
+#print(da.plot)
+#dev.off()
 #png('results2.png',width=300,height=200)
 #print(da.plot)
 #dev.off()
-
-ggsave(file="results1.svg",plot=drag.plot,width=3,height=2);
-ggsave(file="results2.svg",plot=da.plot,width=3,height=2);
+ggsave(filename="results2.svg",
+       plot=da.plot,
+       width=3,height=2,units="in")
 
 
 

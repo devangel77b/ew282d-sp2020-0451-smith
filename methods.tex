@@ -4,24 +4,18 @@
 \subsection{Specimens and physical models}
 I used a single \SI{6}{\year} old specimen (\fref{fig:methods:specimens}A) of \Citrusxparadisi\ (grapefruit) for all measurements. This specimen was germinated in Toledo, Ohio in January of 2014. As it grew, it spent its summers in the bright outdoors and winters in the relatively dark indoors, staying in a plastic pot throughout its life. This caused it to grow top heavy, with larger leaves in the canopy and smaller leaves in its understory. Additionally, it was subject to attacks from tetranychid mites each winter, leaving many leaves scarred. At the time of these trials, the specimen had just ended its winter indoor period, causing it to experience rapid growth. It stood at \SI{1.04}{\meter} tall and measured \SI{0.635}{\meter} across at its widest point; drag measurements focused on the plant's disproportionately large top.
 
-To remove the effects of flexibility, I also created a physical model (\fref{fig:methods:specimens}B) of a single \Cxparadisi\ leaf using \SI{0.1}{\milli\meter} thick aluminum sheeting from a food container (Chipotle; 6658 Airport Hwy, Holland, OH). To prepare the physical model, I traced an actual leaf and cut the profile of the model to match. The physical model was mounted on a wooden pencil to provide a rigid attachment point compared to the typical flexible leaf petioles on \Cxparadisi. 
+To remove the effects of flexibility, I also created a physical model (\fref{fig:methods:specimens}C) of a single \Cxparadisi\ leaf using \SI{0.1}{\milli\meter} thick aluminum sheeting from a food container (Chipotle; 6658 Airport Hwy, Holland, OH). To prepare the physical model, I traced an actual leaf and cut the profile of the model to match. The physical model was mounted on a wooden pencil to provide a rigid attachment point compared to the typical flexible leaf petioles on \Cxparadisi. 
 \begin{figure}
 \begin{center}
-\textbf{Fill in}
+%\includegraphics[width=0.3\columnwidth]{figures/FullPlant.jpg}
+%\includegraphics[width=0.3\columnwidth]{figures/SingleLeaf.jpg}
+%\includegraphics[width=0.3\columnwidth]{figures/MeasuredModel.jpg}
+\includegraphics[width=6in]{figures/fig1.png}
 \end{center}
-\caption{(A) Specimen of \Citrusxparadisi\ (grapefruit) and (B) rigid physical model of a single grapefruit leaf.}
+\caption{(A) Specimen of \Citrusxparadisi\ (grapefruit), height \SI{1}{\meter}; (B) single grapefruit leaf showing winged petiole; and (C) rigid physical model of a single grapefruit leaf.}
 \label{fig:methods:specimens}
 \end{figure}
 
-% Fig 2 is good but zoom in on the two, add callouts and a scalebar, maybe rotate leaves into their normal positions. 
-%\begin{figure}
-%\begin{center}
-%\includegraphics[width=0.33\columnwidth]{figures/Metal_Leaf_Compared.jpg}
-%\includegraphics[width=0.33\columnwidth]{figures/Measured Model.jpg}
-%\end{center}
-%\caption{The aluminum grapefruit leaf model (left) with a small jackfruit leaf. Measuring tape (cm) along the model, for scale (right).}
-%\label{fig:methods2}
-%\end{figure}
 
 
 
@@ -33,9 +27,11 @@ To remove the effects of flexibility, I also created a physical model (\fref{fig
 Because air was blowing from relatively close to the plant, only the area which was directly in front of the fan opening would be exposed to wind. The plant was of a complex shape; to obtain measurements of area normal to the flow ($A$ in \fref{eq:drag}), I used scale-calibrated images and color blob detection/segmentation in \Matlab\ (Mathworks; Natick, MA) (\fref{fig:methods:area}A). Images were taken with the same smartphone camera at a long enough distance to avoid foreshortening and lens distortion; images with and without the plant/leaf were taken from the same location. I took a reference image, without the specimen, with the fan aperture covered with a piece of black construction paper. I then took a similar image with the \Cxparadisi\ specimen present, and used the \Matlab\ \lstinline{colorThresholder} routine to obtain the proportion of area of the fan aperture covered by the specimen. This was then multiplied by the known area of the fan aperture to find the area of the \Cxparadisi\ specimen normal to flow. Identical methods were used to obtain the area of the rigid physical model of a single grapefruit leaf (\fref{fig:methods:area}B). Additional details on the image processing methods are provided in \fref{sec:A}. 
 \begin{figure}
 \begin{center}
-\textbf{Fill in}
+%\includegraphics[width=0.3\columnwidth]{figures/Fan.jpg}
+%\includegraphics[width=0.3\columnwidth]{figures/MetalLeaf.jpg}
+\includegraphics{figures/fig2.png}
 \end{center}
-\caption{Area measurements on \Cxparadisi\ specimen and rigid physical model of a single grapefruit leaf.}
+\caption{Area measurements on (A) \Cxparadisi\ specimen and (B) rigid physical model of a single grapefruit leaf.}
 \label{fig:methods:area}
 \end{figure}
 
@@ -54,10 +50,12 @@ Normally, air velocity measurements would be taken along with drag measurements 
 % Agreed, I'll put in a drawing instead to make it neater
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.49\columnwidth]{figures/Setup1.jpg} 
-\includegraphics[width=0.49\columnwidth]{figures/Setup2.jpg}
+%\includegraphics[width=0.18\columnwidth]{figures/Grapefruit_Setup.jpg} % ROTATE?!
+%\includegraphics[width=0.4\columnwidth]{figures/Setup1.jpg} 
+%\includegraphics[width=0.4\columnwidth]{figures/Setup2.jpg}
+\includegraphics{figures/fig3.png}
 \end{center}
-\caption{Experimental setup to measure deflection and drag on (A) a live \Cxparadisi grapefruit plant; and (B) rigid physical model of a single grapefruit leaf.}
+\caption{Experimental setup to measure deflection and drag on (A, B) a live \Cxparadisi\ grapefruit plant; and (C) rigid physical model of a single grapefruit leaf.}
 \label{fig:methods:drag}
 \end{figure}
 

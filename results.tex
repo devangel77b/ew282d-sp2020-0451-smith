@@ -3,7 +3,7 @@
 
 \subsection{Area measurements}
 Area measurements obtained using color blob detection/segmentation in \Matlab\ are shown in \fref{tab:results:area}.
-\begin{table}
+\begin{table}[h]
 \caption{Area normal to flow for \Cxparadisi\ specimen and rigid physical model of a single grapefruit leaf.}
 \label{tab:results:area}
 \begin{center}
@@ -51,7 +51,7 @@ speed 1 & speed 2 & speed 3 & speed 3 \\
 \end{table}
 
 \begin{table}
-\caption{Summary of drag estimates (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
+\caption{Summary of drag estimates (mean$\pm$s.d.) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
 \label{tab:results:drag}
 \begin{center}
 %\begin{tabular}{lcccc} % table as wide format for slides
@@ -77,22 +77,37 @@ metal leaf, speed 3 & \num{0.014\pm0.007} & \num{4.5\pm2.1} \\
 \end{center}
 \end{table}
 
-\begin{figure}
+\clearpage
+\begin{figure}[p]
 \begin{center}
 \includegraphics{data/results1.pdf}
+%\includesvg{data/results1}
 \end{center}
-\caption{Drag (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) at different fan speeds. The rigid physical model leaf has less drag than the intact \Cxparadisi\ specimen because of smaller area (two-way ANOVA, $p<\num{4.6e-10}$, $n=5$).}
+\caption{Drag (mean$\pm$s.d.) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) at different fan speeds. The rigid physical model leaf has less drag than the intact \Cxparadisi\ specimen because of smaller area (two-way ANOVA, $p<\num{4.6e-10}$, $n=5$).}
 \label{fig:results:drag}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
 \begin{center}
 \includegraphics{data/results2.pdf}
+%\includesvg{data/results2}
 \end{center}
-\caption{Drag, normalized by area, (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf 19\% more drag than the flexible grapefruit leaves at the same speed, however, the differences are not statistically significant consider the small number of replicates and measurement noise (two-way ANOVA, $p=0.3207$, $n=5$). Differences in drag on the \Cxparadisi\ specimen are statistically significant at different speeds ($p=0.025$, $n=5$).}
+\caption{Drag, normalized by area, (mean$\pm$s.d.) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf 19\% more drag than the flexible grapefruit leaves at the same speed, however, the differences are not statistically significant consider the small number of replicates and measurement noise (two-way ANOVA, $p=0.3207$, $n=5$). Differences in drag on the \Cxparadisi\ specimen are statistically significant at different speeds ($p=0.025$, $n=5$).}
 \label{fig:results:dragarea}
 \end{figure}
 
+\clearpage
+\begin{figure}
+\begin{center}
+%\includegraphics[width=0.49\columnwidth]{figures/Snapshot1.jpg}
+%\includegraphics[width=0.49\columnwidth]{figures/Snapshot2.jpg}\\
+%\includegraphics[width=0.49\columnwidth]{figures/Snapshot3.jpg}
+%\includegraphics[width=0.49\columnwidth]{figures/Snapshot4.jpg}
+\includegraphics{figures/fig6.png}
+\end{center}
+\caption{Example frames from slow motion video of \Cxparadisi\ specimen at fan speed 3. Leaves marked 1 (A, B) and 2 (C, D) rotate at the petiole, reducing by half their area normal to the flow. Images are \SIrange{4}{13}{\milli\second} apart.}
+\label{fig:results:leafmovement}
+\end{figure}
 
 
 
@@ -100,15 +115,5 @@ metal leaf, speed 3 & \num{0.014\pm0.007} & \num{4.5\pm2.1} \\
 
 \subsection{Leaf movement during flow}
 % This bit needs some help. 
-\Fref{fig:results:leafmovement} shows frames from the slow motion video of \Cxparadisi\ at fan speed 3. Following the leaves indicated by the number 1, the leaves which were struck head-on by the wind flexed quite far at their joints, exposing roughly half of their surface area to the camera. The leaf indicated with the number 2 in \fref{fig:results:leafmovement} shows the continued vortex shedding on the leaves when wind was blown across them. The leaf pivoted at its joint, but only exposed about half of its area to the wind before returning to its previous state.
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.49\columnwidth]{figures/Snapshot1.jpg}
-\includegraphics[width=0.49\columnwidth]{figures/Snapshot2.jpg}\\
-\includegraphics[width=0.49\columnwidth]{figures/Snapshot3.jpg}
-\includegraphics[width=0.49\columnwidth]{figures/Snapshot4.jpg}
-\end{center}
-\caption{Example frames from slow motion video of \Cxparadisi\ specimen at fan speed 3. Leaves marked 1 and 2 rotate at the petiole, reducing by half their area normal to the flow. Images are \SIrange{4}{13}{\milli\second} apart.}
-\label{fig:results:leafmovement}
-\end{figure}
+\Fref{fig:results:leafmovement} shows frames from the slow motion video of \Cxparadisi\ at fan speed 3. Following the leaves indicated by the number 1, the leaves which were struck head-on by the wind flexed quite far at their joints, exposing roughly half of their surface area to the camera. The leaf indicated with the number 2 in \fref{fig:results:leafmovement} also pivoted at its joint, and exposed about half of its area to the wind before returning to its previous state. The process is dynamic, with leaves feathering and returning to their neutral position in approximately three video frames, or \SI{13}{\milli\second}. 
 
