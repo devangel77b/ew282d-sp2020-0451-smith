@@ -24,10 +24,10 @@ rigid physical model of leaf (metal) & 0.0346 \\
 
 
 \subsection{Drag measurements}
-\Fref{tab:results:displacement} gives the measured raw displacement data for the \Cxparadisi\ specimen and the rigid physical model of a single grapefruit leaf. The resulting drag estimates are summarized in \fref{tab:results:drag} and figures~\ref{fig:results:drag} and \ref{fig:results:dragarea}. \Fref{fig:results:drag} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results:dragarea} shows... (what does it show). 
+\Fref{tab:results:displacement} gives the measured raw displacement data for the \Cxparadisi\ specimen and the rigid physical model of a single grapefruit leaf. The resulting drag estimates are summarized in \fref{tab:results:drag} and figures~\ref{fig:results:drag} and \ref{fig:results:dragarea}. \Fref{fig:results:drag} shows the drag results; the magnitude of the drag force is smaller for the much smaller metal leaf (two-way ANOVA, $p<4.6e-10$, $n=5$). However, when the drag is normalized by area, the effect of leaf flexibility becomes apparent. \Fref{fig:results:dragarea} shows the drag/area ratio increases with fan speed (two-way ANOVA, $p=0.025$, $n=5$) and shows that the mean drag on the metal, rigid physical model of a single leaf is 19\% higher than for the \Cxparadisi\ specimen at the same speed, though the latter effect is not statistically significant (two-way ANOVA, $p=0.3207$) due to measurement error and the low number of samples ($n=5$). 
 
 \begin{table}
-\caption{Measured raw displacement (\si{\meter}) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
+\caption{Measured raw displacement (\SI{e-3}{\meter}) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
 \label{tab:results:displacement}
 \begin{center}
 \begin{tabular}{cccc}
@@ -40,27 +40,38 @@ speed 1 & speed 2 & speed 3 & speed 3 \\
 %0.250 & 0.250 & 0.313 & 0.100 \\
 %0.188 & 0.219 & 0.313 & 0.200 \\
 %0.188 & 0.250 & 0.313 & 0.150 \\
-0.00397 & 0.00635 & 0.00794 & 0.00200 \\ % convert all to SI units
-0.00476 & 0.00476 & 0.00635 & 0.00050 \\
-0.00635 & 0.00635 & 0.00794 & 0.00100 \\
-0.00476 & 0.00556 & 0.00794 & 0.00200 \\
-0.00476 & 0.00635 & 0.00794 & 0.00150 \\
+3.97 & 6.35 & 7.94 & 2.00 \\ % convert all to SI units these are 10^3 m
+4.76 & 4.76 & 6.35 & 0.50 \\
+6.35 & 6.35 & 7.94 & 1.00 \\
+4.76 & 5.56 & 7.94 & 2.00 \\
+4.76 & 6.35 & 7.94 & 1.50 \\
 \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
 \begin{table}
-\caption{Summary of drag estimates for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
+\caption{Summary of drag estimates (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
 \label{tab:results:drag}
 \begin{center}
-\begin{tabular}{lcccc}
+%\begin{tabular}{lcccc} % table as wide format for slides
+%\toprule
+%& grapefruit & grapefruit & grapefruit & metal leaf \\
+%& speed 1 & speed 2 & speed 3 & speed 3 \\
+%\midrule
+%drag, \si{\newton} & \num{0.051\pm0.008} & \num{0.061\pm0.007} & \num{0.079\pm0.007} & \num{0.014\pm0.007} \\
+%drag/area, \si{\newton\per\meter\squared} & \num{2.4\pm0.4} & \num{2.9\pm0.3} & \num{3.7\pm0.3} & \num{4.5\pm2.1} \\
+%\bottomrule
+%\end{tabular}
+\begin{tabular}{lcc} % table as narrow format for journal
 \toprule
-& grapefruit & grapefruit & grapefruit & metal leaf \\
-& speed 1 & speed 2 & speed 3 & speed 3 \\
+& drag & drag/area \\
+& \si{\newton} & \si{\newton\per\meter\squared} \\
 \midrule
-drag, \si{\newton} & \num{0.051\pm0.008} & \num{0.061\pm0.007} & \num{0.079\pm0.007} & \num{0.014\pm0.007} \\
-drag/area, \si{\newton\per\meter\squared} & \num{2.4\pm0.4} & \num{2.9\pm0.3} & \num{3.7\pm0.3} & \num{4.5\pm2.1} \\
+grapefruit, speed 1 & \num{0.051\pm0.008} & \num{2.4\pm0.4} \\
+grapefruit, speed 2 & \num{0.061\pm0.007} & \num{2.9\pm0.3} \\
+grapefruit, speed 3 & \num{0.079\pm0.007} & \num{3.7\pm0.3} \\
+metal leaf, speed 3 & \num{0.014\pm0.007} & \num{4.5\pm2.1} \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -78,7 +89,7 @@ drag/area, \si{\newton\per\meter\squared} & \num{2.4\pm0.4} & \num{2.9\pm0.3} & 
 \begin{center}
 \includegraphics{data/results2.pdf}
 \end{center}
-\caption{Drag, normalized by area, (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf 19\% more drag than the flexible grapefruit leaves at the same speed, however, the differences are not statistically significant consider the small number of replicates and measurement noise (two-way ANOVA, $p=0.3207$, $n=5$). Differences in drag on the \Cxparadisi\ specimen are apparent at different speeds ($p=0.025$).}
+\caption{Drag, normalized by area, (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf 19\% more drag than the flexible grapefruit leaves at the same speed, however, the differences are not statistically significant consider the small number of replicates and measurement noise (two-way ANOVA, $p=0.3207$, $n=5$). Differences in drag on the \Cxparadisi\ specimen are statistically significant at different speeds ($p=0.025$, $n=5$).}
 \label{fig:results:dragarea}
 \end{figure}
 
@@ -97,7 +108,7 @@ drag/area, \si{\newton\per\meter\squared} & \num{2.4\pm0.4} & \num{2.9\pm0.3} & 
 \includegraphics[width=0.49\columnwidth]{figures/Snapshot3.jpg}
 \includegraphics[width=0.49\columnwidth]{figures/Snapshot4.jpg}
 \end{center}
-\caption{Example frames from slow motion video of \Cxparadisi\ specimen at fan speed 3. Leaves marked 1 and 2 rotate at the petiole, reducing by half their area normal to the flow.}
+\caption{Example frames from slow motion video of \Cxparadisi\ specimen at fan speed 3. Leaves marked 1 and 2 rotate at the petiole, reducing by half their area normal to the flow. Images are \SIrange{4}{13}{\milli\second} apart.}
 \label{fig:results:leafmovement}
 \end{figure}
 

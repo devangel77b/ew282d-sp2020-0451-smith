@@ -9,6 +9,7 @@
 \DeclareSIUnit{\inch}{in}
 \DeclareSIUnit{\foot}{ft}
 \DeclareSIUnit{\poundforce}{lbf}
+\DeclareSIUnit{\pound}{lbm}
 \DeclareSIUnit{\frame}{frame}
 \usepackage{graphicx}
 \usepackage[round,authoryear]{natbib}
@@ -17,12 +18,22 @@
 \usepackage{listings}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{booktabs}
+\lstset{%
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=violet,
+  urlcolor=blue,
+  citecolor=blue}
+
 \newcommand{\Citrusxparadisi}{\emph{Citrus $\times$ paradisi}}
 \newcommand{\Cxparadisi}{\emph{C.~$\times$~paradisi}}
 \newcommand{\Matlab}{Matlab}
 \begin{document}
-\lstset{
-  basicstyle=\ttfamily}
 
 \maketitle
 \begin{abstract}
@@ -41,7 +52,7 @@ I thank 4/C Trombetta, 2/C Pak, and 2/C Figueroa for their assistance as classma
 % References
 \bibliography{smith.bib}
 
-%\clearpage
-%\appendix
-%\input{method-details.tex}
+\clearpage
+\appendix
+\input{method-details.tex}
 \end{document}
