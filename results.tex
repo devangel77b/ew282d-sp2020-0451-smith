@@ -1,77 +1,18 @@
 \section{Results}
-%Explain factually what you found... leave interpretation of what it means for the final discussion section. Here you would include plots of what you found or comparison tables.
-For the grapefruit leaves 
+\label{sec:results}
 
-%\subsection{Measurements}
-% This belongs in results
-
-%\begin{table}
-%\caption{Average measured force and area.}
-%\label{tbl:results1}
-%\begin{center}
-%Average force (\si{lbf})\\
-%\begin{tabular}{cccc}
-%\toprule
-%grapefruit & grapefruit & grapefruit & metal leaf \\
-%speed 1 & speed 2 & speed 3 & speed 3 \\
-%\midrule
-%0.051 & 0.061 & 0.79 & 0.014\\
-%\bottomrule
-%\end{tabular}
-%\end{center}
-%\begin{center}
-%Area data (\si{ft\squared})\\
-%\begin{tabular}{cc}
-%\toprule
-%grapefruit & metal leaf \\
-%\midrule
-%208 & 32.8 \\
-%\bottomrule
-%\end{tabular}
-%\end{center}
-%\end{table}
-%
-
-
+\subsection{Area measurements}
+Area measurements obtained using color blob detection/segmentation in \Matlab\ are shown in \fref{tab:results:area}.
 \begin{table}
-\caption{Measured raw displacementdata for grapefruit leaf and metal physical model; average force and area. Should be in SI units. Probably would just give a summary table. Was metal leaf displacement really measured in \si{\centi\meter}? Why is metal leaf so small in picture it looks same size. Suggest moving this to appendix and only having a summary in the main text.}
-\label{tbl:results1}
-
+\caption{Area normal to flow for \Cxparadisi\ specimen and rigid physical model of a single grapefruit leaf.}
+\label{tab:results:area}
 \begin{center}
-Displacement (\si{in})\\
-\begin{tabular}{cccc}
-\toprule
-grapefruit & grapefruit & grapefruit & metal leaf \\
-speed 1 & speed 2 & speed 3 & speed 3(cm) \\ 
-\midrule
-0.156 & 0.250 & 0.313 & 0.200 \\
-0.188 & 0.188 & 0.250 & 0.0500 \\
-0.250 & 0.250 & 0.313 & 0.100 \\
-0.188 & 0.219 & 0.313 & 0.200 \\
-0.188 & 0.250 & 0.313 & 0.150 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{center}
-Average force (\si{lbf})\\
-\begin{tabular}{cccc}
-\toprule
-grapefruit & grapefruit & grapefruit & metal leaf \\
-speed 1 & speed 2 & speed 3 & speed 3 \\
-\midrule
-0.011 & 0.014 & 0.018 & 0.0032\\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\begin{center}
-Area data (\si{ft\squared})\\
 \begin{tabular}{cc}
 \toprule
-grapefruit & metal leaf \\ %& k (lbf/in) \\
+& area, \si{\meter\squared} \\
 \midrule
-0.223 & 0.0345 \\ %& 0.059\\
+\Cxparadisi\ grapefruit specimen & 0.223 \\
+rigid physical model of leaf (metal) & 0.0346 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -79,72 +20,84 @@ grapefruit & metal leaf \\ %& k (lbf/in) \\
 
 
 
-\Fref{fig:results1} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results2} shows... (what does it show). 
-
-\begin{figure}
-\begin{center}
-\includegraphics{data/results1.pdf}
-\end{center}
-\caption{Drag (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (two-way ANOVA, $p<\num{1.67e-5}$, $n=5$).}
-\label{fig:results1}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-\includegraphics{data/results2.pdf}
-\end{center}
-\caption{Drag, normalized by area, (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two-way ANOVA, $p<0.003$, $n=5$).}
-\label{fig:results2}
-\end{figure}
 
 
-%\section{Results}
-%Explain factually what you found... leave interpretation of what it means for the final discussion section. Here you would include plots of what you found or comparison tables.
-% Qualitatively, are there photos showing how the grapefruit leaves moved under wind? Did they bend in particular places, or fold up or rotate in particular ways to reduce their drag?
+
+\subsection{Drag measurements}
+\Fref{tab:results:displacement} gives the measured raw displacement data for the \Cxparadisi\ specimen and the rigid physical model of a single grapefruit leaf. The resulting drag estimates are summarized in \fref{tab:results:drag} and figures~\ref{fig:results:drag} and \ref{fig:results:dragarea}. \Fref{fig:results:drag} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results:dragarea} shows... (what does it show). 
 
 \begin{table}
-\caption{Summary of drag results?}
+\caption{Measured raw displacement (\si{\meter}) for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
+\label{tab:results:displacement}
 \begin{center}
-\begin{tabular}{ccccc}
-      & grapefruit & grapefruit & grapefruit & model \\
-      & speed 1 & speed 2 & speed 3 & speed 3 \\
-     Average Drag/Area & 0.00024 & 0.00029 & 0.00038 & 0.00045
+\begin{tabular}{cccc}
+\toprule
+grapefruit & grapefruit & grapefruit & metal leaf \\
+speed 1 & speed 2 & speed 3 & speed 3 \\ 
+\midrule
+%0.156 & 0.250 & 0.313 & 0.200 \\ % inches / cm 
+%0.188 & 0.188 & 0.250 & 0.0500 \\
+%0.250 & 0.250 & 0.313 & 0.100 \\
+%0.188 & 0.219 & 0.313 & 0.200 \\
+%0.188 & 0.250 & 0.313 & 0.150 \\
+0.00397 & 0.00635 & 0.00794 & 0.00200 \\ % convert all to SI units
+0.00476 & 0.00476 & 0.00635 & 0.00050 \\
+0.00635 & 0.00635 & 0.00794 & 0.00100 \\
+0.00476 & 0.00556 & 0.00794 & 0.00200 \\
+0.00476 & 0.00635 & 0.00794 & 0.00150 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\caption{Summary of drag estimates for \Cxparadisi\ grapefruit specimen and rigid physical model of a single leaf (metal).}
+\label{tab:results:drag}
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+& grapefruit & grapefruit & grapefruit & metal leaf \\
+& speed 1 & speed 2 & speed 3 & speed 3 \\
+\midrule
+drag, \si{\newton} & \num{0.051\pm0.008} & \num{0.061\pm0.007} & \num{0.079\pm0.007} & \num{0.014\pm0.007} \\
+drag/area, \si{\newton\per\meter\squared} & \num{2.4\pm0.4} & \num{2.9\pm0.3} & \num{3.7\pm0.3} & \num{4.5\pm2.1} \\
+\bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
 \begin{figure}
-    \centering
-    \includegraphics[width=0.49\columnwidth]{figures/Snapshot1.jpg}
-    \includegraphics[width=0.49\columnwidth]{figures/Snapshot2.jpg}
-    \caption{Caption}
-    \label{fig:results1}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.49\columnwidth]{figures/Snapshot3.jpg}
-    \includegraphics[width=0.49\columnwidth]{figures/Snapshot4.jpg}
-    \caption{Caption}
-    \label{fig:results2}
-\end{figure}
-
-Figures~\ref{fig:results1} and \ref{fig:results2} both show frames from the slow motion video of the \Cxparadisi\ leaves in the wind. Following the leaves indicated by the number 1, the leaves which were struck head-on by the wind flexed quite far at their joints, exposing roughly half of their surface area to the camera. The leaf indicated with the number 2 in \fref{fig:results2} shows the continued vortex shedding on the leaves when wind was blown across them. The leaf pivoted at its joint, but only exposed about half of its area to the wind before returning to its previous state.
-
-\Fref{fig:results3} shows... (what does it show). When the drag is normalized by area, the effect of leaf flexibility is apparent. \Fref{fig:results4} shows... (what does it show). 
-
-\begin{figure}
 \begin{center}
 \includegraphics{data/results1.pdf}
 \end{center}
-\caption{Drag (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. The smaller model metal leaf has less drag than the actual grapefruit leaves because of smaller area (two-way ANOVA, $p<\num{1.67e-5}$, $n=5$).}
-\label{fig:results3}
+\caption{Drag (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) at different fan speeds. The rigid physical model leaf has less drag than the intact \Cxparadisi\ specimen because of smaller area (two-way ANOVA, $p<\num{4.6e-10}$, $n=5$).}
+\label{fig:results:drag}
 \end{figure}
 
 \begin{figure}
 \begin{center}
 \includegraphics{data/results2.pdf}
 \end{center}
-\caption{Drag, normalized by area, (mean$\pm$sd) for grapefruit (green) and metal (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf has significantly more drag than the flexible grapefruit leaves at low speeds and at the highest speed (two-way ANOVA, $p<0.003$, $n=5$).}
-\label{fig:results4}
+\caption{Drag, normalized by area, (mean$\pm$sd) for \Cxparadisi\ grapefruit specimen (green) and metal rigid physical model (gray) leaves at different fan speeds. Normalized by area, the rigid metal leaf 19\% more drag than the flexible grapefruit leaves at the same speed, however, the differences are not statistically significant consider the small number of replicates and measurement noise (two-way ANOVA, $p=0.3207$, $n=5$). Differences in drag on the \Cxparadisi\ specimen are apparent at different speeds ($p=0.025$).}
+\label{fig:results:dragarea}
 \end{figure}
+
+
+
+
+
+
+\subsection{Leaf movement during flow}
+% This bit needs some help. 
+\Fref{fig:results:leafmovement} shows frames from the slow motion video of \Cxparadisi\ at fan speed 3. Following the leaves indicated by the number 1, the leaves which were struck head-on by the wind flexed quite far at their joints, exposing roughly half of their surface area to the camera. The leaf indicated with the number 2 in \fref{fig:results:leafmovement} shows the continued vortex shedding on the leaves when wind was blown across them. The leaf pivoted at its joint, but only exposed about half of its area to the wind before returning to its previous state.
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.49\columnwidth]{figures/Snapshot1.jpg}
+\includegraphics[width=0.49\columnwidth]{figures/Snapshot2.jpg}\\
+\includegraphics[width=0.49\columnwidth]{figures/Snapshot3.jpg}
+\includegraphics[width=0.49\columnwidth]{figures/Snapshot4.jpg}
+\end{center}
+\caption{Example frames from slow motion video of \Cxparadisi\ specimen at fan speed 3. Leaves marked 1 and 2 rotate at the petiole, reducing by half their area normal to the flow.}
+\label{fig:results:leafmovement}
+\end{figure}
+

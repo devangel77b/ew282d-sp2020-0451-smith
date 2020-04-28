@@ -1,10 +1,15 @@
 \documentclass[]{article}
 
-\title{Flow-induced shape reconfiguration in houseplants}
+\title{Drag on grapefruit leaves in wind and flow-induced shape reconfiguration}
 \author{C Smith}
 \date{\today}
 
-\usepackage{siunitx}
+\usepackage[separate-uncertainty=true]{siunitx}
+\DeclareSIUnit{\year}{y}
+\DeclareSIUnit{\inch}{in}
+\DeclareSIUnit{\foot}{ft}
+\DeclareSIUnit{\poundforce}{lbf}
+\DeclareSIUnit{\frame}{frame}
 \usepackage{graphicx}
 \usepackage[round,authoryear]{natbib}
 \bibliographystyle{apalike}
@@ -14,13 +19,14 @@
 \usepackage{booktabs}
 \newcommand{\Citrusxparadisi}{\emph{Citrus $\times$ paradisi}}
 \newcommand{\Cxparadisi}{\emph{C.~$\times$~paradisi}}
+\newcommand{\Matlab}{Matlab}
 \begin{document}
 \lstset{
   basicstyle=\ttfamily}
 
 \maketitle
 \begin{abstract}
-This study was conducted to investigate how effectively citrus plants can change their structure to generate less drag in wind. A cord with known spring constant was attached to a young grapefruit plant and an aluminum model of one of its leaves, a box fan was used to create a wind tunnel, and area was calculated using Matlab's color thresholding and blob detection software. The actual drag created on the grapefruit leaves was significantly less than the drag expected on an identical model, and slow motion video analysis indicated that this was the result of the citrus's ability to bend at the petiole. The extreme bending in several directions showed the plant's possible inclination toward protective load shedding.
+This study was conducted to investigate how effectively citrus plants can change their structure to generate less drag in wind. A cord with known spring constant was attached to a young grapefruit plant and an aluminum model of one of its leaves, a box fan was used to create a wind tunnel, and area was calculated using \Matlab's color thresholding and blob detection software. The actual drag created on the grapefruit leaves was significantly less than the drag expected on an identical model, and slow motion video analysis indicated that this was the result of the citrus's ability to bend at the petiole. The extreme bending in several directions showed the plant's possible inclination toward protective load shedding.
 \end{abstract}
 {\scriptsize\textbf{Keywords: }grapefruit, citrus, drag, leaf, petiole}
 
