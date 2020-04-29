@@ -16,7 +16,7 @@ Four red-green-blue (RGB) color images (\fref{fig:app:images}) were taken using 
 
 
 \subsection{Color blob detection/segmentation using \Matlab}
-Color blob detection/segmentation was obtained using the \lstinline{colorThresholder} tool in \Matlab. Images were first converted from RGB colorspace to hue-saturation-value (HSV) colorspace; thresholding was then applied in each channel using the sliders to obtain a binary image corresponding to (1) the fan; (2) the area of the fan obstructed by the plant; (3) the orange sheet; and (4) the area of the orange sheet obstructed by the metal leaf, respectively. 
+Color blob detection/segmentation was obtained using the \lstinline{colorThresholder} tool in \Matlab. Images were first converted from RGB colorspace to hue-saturation-value (HSV) colorspace; thresholding was then applied in each channel using the sliders to obtain a binary image corresponding to (1) the area of the orange sheet obstructed by the metal leaf; (2) the orange sheet; (3) the fan; (4) the area of the fan obstructed by the plant, respectively. 
 
 \subsection{Area calculation}
 The binary images were labeled as contiguous regions using the \lstinline{bwlabel} command; the largest blobs were manually selected for futher processing. From the labeled region, the \lstinline{regionprops} command was used to obtain the \lstinline{FilledArea} property, which corresponds to the number of pixels contained in the selected blob. 
